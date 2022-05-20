@@ -54,7 +54,7 @@ public class StudentController {
 		try {
 		     Student s = stdService.get(id);
 			stdService.saveStudent(student);
-			return new ResponseEntity<Student>(HttpStatus.OK);
+			return new ResponseEntity<Student>(s,HttpStatus.OK);
 		} catch (NoSuchElementException e) {
 			return new ResponseEntity<Student>(HttpStatus.NOT_FOUND);
 		}
